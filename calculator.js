@@ -13,7 +13,7 @@ function calculator(input) {
 }
 
 function checkInput(input) {
-  const operators = ['add', '+', 'subtract', '-', 'multiple', '*', 'divide', '/', 'modulo', '%', 'exponents', '^'];
+  const operators = ['add', '+', 'subtract', '-', 'multiply', '*', 'divide', '/', 'modulo', '%', 'exponents', '^'];
 
   if (input === null || input.num1 === null || input.num2 === null) {
     console.log('One or more input values are empty.');
@@ -28,13 +28,17 @@ function checkInput(input) {
 }
 
 function doCalculations(input) {
+  let result = 0;
+
   if (['add', '+'].includes(input.operation)) {
-
+    result = input.num1 + input.num2;
   } else if (['subtract', '-'].includes(input.operation)) {
-
+    result =  
   } else if (['multiply', '*'].includes(input.operation)) {
     
   } else if (['divide', '/'].includes(input.operation)) {
     
   }
+
+  console.log(result);
 }
