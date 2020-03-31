@@ -37,7 +37,11 @@ function doCalculations(input) {
   } else if (['multiply', '*'].includes(input.operation)) {
     result = input.num1 * input.num2;
   } else if (['divide', '/'].includes(input.operation)) {
-    
+    if (input.num2 != 0) {
+      result = input.num1 / input.num2;
+    } else {
+      console.log('You cannot divide by 0.')''
+    } 
   }
 
   console.log(result);
