@@ -33,9 +33,9 @@ function doCalculations(input) {
   if (['add', '+'].includes(input.operation)) {
     result = input.num1 + input.num2;
   } else if (['subtract', '-'].includes(input.operation)) {
-    result =  
+    result = input.num1 - input.num2;
   } else if (['multiply', '*'].includes(input.operation)) {
-    
+    result = input.num1 * input.num2;
   } else if (['divide', '/'].includes(input.operation)) {
     
   }
