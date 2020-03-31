@@ -11,3 +11,18 @@ function calculator(input) {
     doCalculations(input);
   }
 }
+
+function checkInput(input) {
+  const operators = ['add', '+', 'subtract', '-', 'multiple', '*', 'divide', '/', 'modulo', '%', 'exponents', '^'];
+
+  if (input === null || input.num1 === null || input.num2 === null) {
+    console.log('One or more input values are empty.');
+    return false;
+  } else if (!operators.includes(input.operation)) {
+    console.log('Please input a valid operator.');
+    return false;
+  } else {
+    return true;
+  }
+
+}
