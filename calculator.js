@@ -26,3 +26,15 @@ function checkInput(input) {
   }
 
 }
+
+function doCalculations(input) {
+  if (['add', '+'].includes(input.operation)) {
+
+  } else if (['subtract', '-'].includes(input.operation)) {
+
+  } else if (['multiply', '*'].includes(input.operation)) {
+    
+  } else if (['divide', '/'].includes(input.operation)) {
+    
+  }
+}
