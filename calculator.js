@@ -1,10 +1,22 @@
-const exampleAdditionInput = {
+const exampleAdditionA = {
   num1: 3,
   num2: 5,
   operation: 'add',
 }
 
-function calculator(input) {
+const exampleAdditionB = {
+  num1: 3,
+  num2: 8.3,
+  operation: 'add',
+}
+
+const exampleAdditionC = {
+  num1: 100.2,
+  num2: 9.1,
+  operation: 'add',
+}
+
+const calculator = function(input) {
   const check_validity = checkInput(input);
 
   if (check_validity) {
@@ -12,7 +24,7 @@ function calculator(input) {
   }
 }
 
-function checkInput(input) {
+const checkInput = function(input) {
   const operators = ['add', '+', 'subtract', '-', 'multiply', '*', 'divide', '/', 'modulo', '%', 'exponents', '^'];
 
   if (input === null || input.num1 === null || input.num2 === null) {
@@ -27,7 +39,7 @@ function checkInput(input) {
 
 }
 
-function doCalculations(input) {
+const doCalculations = function(input) {
   let result = 0;
 
   if (['add', '+'].includes(input.operation)) {
@@ -40,9 +52,18 @@ function doCalculations(input) {
     if (input.num2 != 0) {
       result = input.num1 / input.num2;
     } else {
-      console.log('You cannot divide by 0.')''
+      console.log('You cannot divide by 0.');
     } 
   }
 
   console.log(result);
 }
+
+console.log('Addition with two integers')
+calculator(exampleAdditionA);
+
+console.log('Addition with 1 int, 1 float')
+calculator(exampleAdditionB);
+
+console.log('Addition with two floats')
+calculator(exampleAdditionC);
