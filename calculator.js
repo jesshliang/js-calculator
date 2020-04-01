@@ -2,19 +2,19 @@ const exampleAdditionA = {
   num1: 3,
   num2: 5,
   operation: 'add',
-}
+};
 
 const exampleAdditionB = {
   num1: 3,
   num2: 8.3,
   operation: 'add',
-}
+};
 
 const exampleAdditionC = {
   num1: 100.2,
   num2: 9.1,
   operation: 'add',
-}
+};
 
 const calculator = function(input) {
   const check_validity = checkInput(input);
@@ -22,7 +22,7 @@ const calculator = function(input) {
   if (check_validity) {
     doCalculations(input);
   }
-}
+};
 
 const checkInput = function(input) {
   const operators = ['add', '+', 'subtract', '-', 'multiply', '*', 'divide', '/', 'modulo', '%', 'exponents', '^'];
@@ -37,7 +37,7 @@ const checkInput = function(input) {
     return true;
   }
 
-}
+};
 
 const doCalculations = function(input) {
   let result = 0;
@@ -57,7 +57,7 @@ const doCalculations = function(input) {
   }
 
   console.log(result);
-}
+};
 
 console.log('Addition with two integers')
 calculator(exampleAdditionA);
