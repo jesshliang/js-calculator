@@ -34,6 +34,26 @@ const exampleSubC = {
   operation: 'subtract',
 };
 
+const exampleMultA = {
+  num1: 3,
+  num2: 5,
+  operation: 'multiply',
+};
+
+const exampleMultB = {
+  num1: 3,
+  num2: 8.3,
+  operation: 'multiply',
+};
+
+const exampleMultC = {
+  num1: 100.2,
+  num2: 9.1,
+  operation: 'multiply',
+};
+
+
+
 const calculator = function(input) {
   const check_validity = checkInput(input);
 
@@ -95,3 +115,13 @@ calculator(exampleSubB);
 
 console.log('Sub with two floats')
 calculator(exampleSubC);
+
+
+console.log('Mult with two integers')
+calculator(exampleMultA);
+
+console.log('Mult with 1 int, 1 float')
+calculator(exampleMultB);
+
+console.log('Mult with two floats')
+calculator(exampleMultC);
