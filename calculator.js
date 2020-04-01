@@ -9,6 +9,7 @@ const calculator = function(error, input) {
   }
 };
 
+// Converts the inputs to numbers.
 const convertProblem = function(input) {
   input.num1 = Number(input.num1);
   input.num2 = Number(input.num2);
@@ -16,6 +17,7 @@ const convertProblem = function(input) {
   return input;
 };
 
+// Checks that the inputs are valid.
 const checkInput = function(input) {
   const operators = ['add', '+', 'subtract', '-', 'multiply', '*', 'divide', '/', 'modulo', '%', 'exponents', '^'];
 
@@ -31,6 +33,7 @@ const checkInput = function(input) {
 
 };
 
+// Performs the calculations.
 const doCalculations = function(input) {
   let result = 0;
 
@@ -71,154 +74,3 @@ let toCalculate = [
 
 prompt.start();
 prompt.get(toCalculate, calculator);
-
-
-// const exampleAdditionA = {
-//   num1: 3,
-//   num2: 5,
-//   operation: 'add',
-// };
-
-// const exampleAdditionB = {
-//   num1: 3,
-//   num2: 8.3,
-//   operation: 'add',
-// };
-
-// const exampleAdditionC = {
-//   num1: 100.2,
-//   num2: 9.1,
-//   operation: 'add',
-// };
-
-// const exampleSubA = {
-//   num1: 3,
-//   num2: 5,
-//   operation: 'subtract',
-// };
-
-// const exampleSubB = {
-//   num1: 3,
-//   num2: 8.3,
-//   operation: 'subtract',
-// };
-
-// const exampleSubC = {
-//   num1: 100.2,
-//   num2: 9.1,
-//   operation: 'subtract',
-// };
-
-// const exampleMultA = {
-//   num1: 3,
-//   num2: 5,
-//   operation: 'multiply',
-// };
-
-// const exampleMultB = {
-//   num1: 3,
-//   num2: 8.3,
-//   operation: 'multiply',
-// };
-
-// const exampleMultC = {
-//   num1: 100.2,
-//   num2: 9.1,
-//   operation: 'multiply',
-// };
-
-// const exampleDivA = {
-//   num1: 3,
-//   num2: 5,
-//   operation: 'divide',
-// };
-
-// const exampleDivB = {
-//   num1: 3,
-//   num2: 8.3,
-//   operation: 'divide',
-// };
-
-// const exampleDivC = {
-//   num1: 100.2,
-//   num2: 9.1,
-//   operation: 'divide',
-// };
-
-// const exampleDivD = {
-//   num1: 3,
-//   num2: 0,
-//   operation: 'divide',
-// };
-
-// const badError1 = {
-//   num1: 'clown',
-//   num2: 2,
-//   operation: 'add'
-// }
-
-// const badError2 = {
-//   num1: 2,
-//   num2: 'clown',
-//   operation: 'add'
-// }
-
-// const badError3 = {
-//   num1: 3,
-//   num2: 2,
-//   operation: 'clown'
-// }
-
-
-// console.log('Addition with two integers')
-// calculator(exampleAdditionA);
-
-// console.log('Addition with 1 int, 1 float')
-// calculator(exampleAdditionB);
-
-// console.log('Addition with two floats')
-// calculator(exampleAdditionC);
-
-
-// console.log('Sub with two integers')
-// calculator(exampleSubA);
-
-// console.log('Sub with 1 int, 1 float')
-// calculator(exampleSubB);
-
-// console.log('Sub with two floats')
-// calculator(exampleSubC);
-
-
-// console.log('Mult with two integers')
-// calculator(exampleMultA);
-
-// console.log('Mult with 1 int, 1 float')
-// calculator(exampleMultB);
-
-// console.log('Mult with two floats')
-// calculator(exampleMultC);
-
-
-// console.log('Div with two integers')
-// calculator(exampleDivA);
-
-// console.log('Div with 1 int, 1 float')
-// calculator(exampleDivB);
-
-// console.log('Div with two floats')
-// calculator(exampleDivC);
-
-// console.log('Div with a 0')
-// calculator(exampleDivD);
-
-// console.log('\n EDGE \n')
-
-// console.log('Edge: Bad input at num1')
-// calculator(badError1);
-
-// console.log('Edge: Bad input at num2')
-// calculator(badError2);
-
-// console.log('Edge: Bad input at oper')
-// calculator(badError3);
