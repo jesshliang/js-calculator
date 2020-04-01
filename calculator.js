@@ -52,6 +52,48 @@ const exampleMultC = {
   operation: 'multiply',
 };
 
+const exampleDivA = {
+  num1: 3,
+  num2: 5,
+  operation: 'divide',
+};
+
+const exampleDivB = {
+  num1: 3,
+  num2: 8.3,
+  operation: 'divide',
+};
+
+const exampleDivC = {
+  num1: 100.2,
+  num2: 9.1,
+  operation: 'divide',
+};
+
+const exampleDivD = {
+  num1: 3,
+  num2: 0,
+  operation: 'divide',
+};
+
+const badError1 = {
+  num1: 'clown',
+  num2: 2,
+  operation: 'add'
+}
+
+const badError2 = {
+  num1: 2,
+  num2: 'clown',
+  operation: 'add'
+}
+
+const badError3 = {
+  num1: 3,
+  num2: 2,
+  operation: 'clown'
+}
+
 
 
 const calculator = function(input) {
@@ -65,8 +107,8 @@ const calculator = function(input) {
 const checkInput = function(input) {
   const operators = ['add', '+', 'subtract', '-', 'multiply', '*', 'divide', '/', 'modulo', '%', 'exponents', '^'];
 
-  if (input === null || input.num1 === null || input.num2 === null) {
-    console.log('One or more input values are empty.');
+  if (typeof input.num1 !== 'number' || typeof input.num2 !== 'number') {
+    console.log('One or more input values are invalid.');
     return false;
   } else if (!operators.includes(input.operation)) {
     console.log('Please input a valid operator.');
@@ -91,10 +133,11 @@ const doCalculations = function(input) {
       result = input.num1 / input.num2;
     } else {
       console.log('You cannot divide by 0.');
+      return;
     } 
   }
 
-  console.log( Math.round(result * 10) / 10);
+  console.log( Math.round(result * 100) / 100);
 };
 
 console.log('Addition with two integers')
@@ -125,3 +168,27 @@ calculator(exampleMultB);
 
 console.log('Mult with two floats')
 calculator(exampleMultC);
+
+
+console.log('Div with two integers')
+calculator(exampleDivA);
+
+console.log('Div with 1 int, 1 float')
+calculator(exampleDivB);
+
+console.log('Div with two floats')
+calculator(exampleDivC);
+
+console.log('Div with a 0')
+calculator(exampleDivD);
+
+console.log('\n EDGE \n')
+
+console.log('Edge: Bad input at num1')
+calculator(badError1);
+
+console.log('Edge: Bad input at num2')
+calculator(badError2);
+
+console.log('Edge: Bad input at oper')
+calculator(badError3);
