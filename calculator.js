@@ -16,6 +16,24 @@ const exampleAdditionC = {
   operation: 'add',
 };
 
+const exampleSubA = {
+  num1: 3,
+  num2: 5,
+  operation: 'subtract',
+};
+
+const exampleSubB = {
+  num1: 3,
+  num2: 8.3,
+  operation: 'subtract',
+};
+
+const exampleSubC = {
+  num1: 100.2,
+  num2: 9.1,
+  operation: 'subtract',
+};
+
 const calculator = function(input) {
   const check_validity = checkInput(input);
 
@@ -56,7 +74,7 @@ const doCalculations = function(input) {
     } 
   }
 
-  console.log(result);
+  console.log( Math.round(result * 10) / 10);
 };
 
 console.log('Addition with two integers')
@@ -67,3 +85,13 @@ calculator(exampleAdditionB);
 
 console.log('Addition with two floats')
 calculator(exampleAdditionC);
+
+
+console.log('Sub with two integers')
+calculator(exampleSubA);
+
+console.log('Sub with 1 int, 1 float')
+calculator(exampleSubB);
+
+console.log('Sub with two floats')
+calculator(exampleSubC);
