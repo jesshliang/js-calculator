@@ -94,8 +94,6 @@ const badError3 = {
   operation: 'clown'
 }
 
-
-
 const calculator = function(input) {
   const check_validity = checkInput(input);
 
