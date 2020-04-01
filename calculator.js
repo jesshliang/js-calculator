@@ -18,7 +18,7 @@ const convertProblem = function(input) {
 
 const checkInput = function(input) {
   const operators = ['add', '+', 'subtract', '-', 'multiply', '*', 'divide', '/', 'modulo', '%', 'exponents', '^'];
-console.log(input);
+
   if (typeof input.num1 !== 'number' || typeof input.num2 !== 'number' || isNaN(input.num1) || isNaN(input.num2)) {
     console.log('One or more input values are invalid.');
     return false;
